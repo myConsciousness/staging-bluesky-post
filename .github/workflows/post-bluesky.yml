@@ -7,6 +7,12 @@ jobs:
   post:
     runs-on: ubuntu-latest
     steps:
+      - name: Debug directory structure
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tree
+          tree ${{ github.workspace }}
+
       - name: Debug file path
         run: |
           ls -la ${{ github.workspace }}/image
