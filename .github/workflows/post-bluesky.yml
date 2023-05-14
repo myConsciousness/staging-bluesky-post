@@ -11,7 +11,7 @@ jobs:
       - uses: myConsciousness/bluesky-post@v3
         with:
           text: "@shinyakato.dev Test post from Github Actions powered by 'myConsciousness/bluesky-post'."
-          media: Dash.png
+          media: image/Dash.png
           media-alt: "My cool photo"
           identifier: ${{ secrets.BLUESKY_IDENTIFIER }}
           password: ${{ secrets.BLUESKY_PASSWORD }}
