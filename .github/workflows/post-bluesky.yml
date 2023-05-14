@@ -7,21 +7,10 @@ jobs:
   post:
     runs-on: ubuntu-latest
     steps:
-      - name: Debug directory structure
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y tree
-          tree ../${{ github.workspace }}
-
-      - name: Debug file path
-        run: |
-          ls -la ${{ github.workspace }}/image
-          echo "File path: ${{ github.workspace }}/image/Dash.png"
-
       - uses: myConsciousness/bluesky-post@v3
         with:
           text: "@shinyakato.dev Test post from Github Actions powered by 'myConsciousness/bluesky-post'."
-          media: ./image/Dash.png
+          media: Dash.png
           media-alt: "My cool photo"
           identifier: ${{ secrets.BLUESKY_IDENTIFIER }}
           password: ${{ secrets.BLUESKY_PASSWORD }}
