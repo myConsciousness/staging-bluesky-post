@@ -7,10 +7,11 @@ jobs:
   post:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - uses: myConsciousness/bluesky-post@v3
         with:
           text: "@shinyakato.dev Test post from Github Actions powered by 'myConsciousness/bluesky-post'."
-          media: app/image/Dash.png
+          media: Dash.png
           media-alt: "My cool photo"
           identifier: ${{ secrets.BLUESKY_IDENTIFIER }}
           password: ${{ secrets.BLUESKY_PASSWORD }}
