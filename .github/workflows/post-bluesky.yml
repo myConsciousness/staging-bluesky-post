@@ -1,0 +1,14 @@
+name: Send Bluesky Post
+
+on:
+    workflow_dispatch:
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: myConsciousness/bluesky-post@v3
+        with:
+          text: "@shinyakato.dev Test post from Github Actions powered by 'myConsciousness/bluesky-post'."
+          identifier: ${{ secrets.BLUESKY_IDENTIFIER }}
+          password: ${{ secrets.BLUESKY_PASSWORD }}
