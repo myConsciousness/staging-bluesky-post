@@ -7,6 +7,11 @@ jobs:
   post:
     runs-on: ubuntu-latest
     steps:
+      - name: Debug file path
+        run: |
+          ls -la ${{ github.workspace }}/image
+          echo "File path: ${{ github.workspace }}/image/Dash.png"
+
       - uses: myConsciousness/bluesky-post@v3
         with:
           text: "@shinyakato.dev Test post from Github Actions powered by 'myConsciousness/bluesky-post'."
