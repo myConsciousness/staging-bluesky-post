@@ -13,6 +13,8 @@ jobs:
           text: "@shinyakato.dev Test post from Github Actions powered by 'myConsciousness/bluesky-post'."
           media: image/Dash.png
           media-alt: "My cool photo"
+          langs: "en,ja"
+          labels: "fun,sports"
           identifier: ${{ secrets.BLUESKY_IDENTIFIER }}
           password: ${{ secrets.BLUESKY_PASSWORD }}
           retry-count: 10
