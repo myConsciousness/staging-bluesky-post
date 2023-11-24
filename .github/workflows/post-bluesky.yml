@@ -10,11 +10,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: myConsciousness/bluesky-post@v5
         with:
-          text: "@shinyakato.dev Test post from Github Actions powered by 'myConsciousness/bluesky-post'."
-          media: image/Dash.png
-          media-alt: "My cool photo"
+          text: "@shinyakato.dev Test post from Github Actions powered by 'myConsciousness/bluesky-post'. #bluesky [test](https://atprotodart.com)"
           langs: "en,ja"
-          labels: "fun,sports"
+          tags: "test,tag"
+          link-preview-url: "https://atprotodart.com"
           identifier: ${{ secrets.BLUESKY_IDENTIFIER }}
           password: ${{ secrets.BLUESKY_PASSWORD }}
           retry-count: 10
