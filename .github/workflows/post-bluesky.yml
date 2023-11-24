@@ -7,8 +7,8 @@ jobs:
   post:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: myConsciousness/bluesky-post@v4
+      - uses: actions/checkout@v3
+      - uses: myConsciousness/bluesky-post@v5
         with:
           text: "@shinyakato.dev Test post from Github Actions powered by 'myConsciousness/bluesky-post'."
           media: image/Dash.png
